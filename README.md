@@ -1,4 +1,4 @@
-# SCLabAAT
+# SC Lab AAT
 Soft Computing Laboratory AAT programs
 
 Program 1: Fuzzy Relations (Max-min composition)/ Implications/ Inferences
