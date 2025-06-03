@@ -1,0 +1,19 @@
+#4 Parallel algorithms and distributed systems, e.g. Merge Sort
+
+from multiprocessing import Pool
+
+def mergesort(arr):
+  if len(arr)<=1:
+    return arr
+  mid=len(arr)//2
+  left=mergesort(arr[:mid])
+  right=mergesort(arr[mid:])
+  return merge(left, right)
+def merge(left,right):
+  result=[]
+  while left and right:
+    result.append(left.pop(0) if left[0]<right[0] else right.pop(0))
+  result+=left or right
+  return result
+arr=[38,27,43,3,9,82,]
+print("Sorted array:", mergesort(arr))
